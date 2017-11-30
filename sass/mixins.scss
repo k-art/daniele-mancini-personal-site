@@ -1,0 +1,38 @@
+@mixin container {
+  margin: 0 auto;
+  width: 280px;
+
+  @media (min-width: 660px) {
+    width: 620px;
+  }
+
+  @media (min-width: 960px) {
+    width: 940px;
+  }
+}
+
+@mixin clearfix {
+  &::after {
+    content: "";
+
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin no-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@mixin visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
