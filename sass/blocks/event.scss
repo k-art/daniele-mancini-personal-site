@@ -1,0 +1,60 @@
+.event {
+
+  &__link {
+    padding: 15px 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid $violet;
+    text-decoration: none;
+    color: #fff;
+
+    &--active {
+      background-color: $gray;
+    }
+
+    &:hover, &:focus {
+      background-color: $gray;
+    }
+
+    &:active {
+      background-color: darken($gray, 10%);
+    }
+  }
+
+  &__date {
+    flex-basis: 35%;
+  }
+
+  &__day-and-month {
+    margin-bottom: 10px;
+    display: block;
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 700;
+    color: $violet;
+  }
+
+  &__year {
+    display: block;
+  }
+
+  &__description {
+    flex-basis: 65%;
+    text-align: right;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 10px;
+    display: block;
+    font-size: 18px;
+    line-height: 21px;
+    color: $violet;
+  }
+
+  &__text {
+    margin: 0;
+    display: block;
+  }
+}

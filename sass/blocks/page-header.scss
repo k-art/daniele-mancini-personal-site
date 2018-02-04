@@ -1,0 +1,38 @@
+.page-header {
+  padding-bottom: 90px;
+  width: 100%;
+  min-height: 550px;
+  background-color: $violet-dark;
+  background-image: url("/img/bg__main-header.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+
+  &__wrapper {
+
+
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 300px;
+    max-width: 50%;
+    font-size: 70px;
+    line-height: 70px;
+    text-align: center;
+  }
+
+  &__text {
+    margin: 0 auto;
+    margin-bottom: 50px;
+    max-width: 50%;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+  }
+}
+

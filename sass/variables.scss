@@ -1,4 +1,15 @@
-$color-darkblue: #283645;
-$color-pink: #d22856;
+$violet-dark: #332532;
+$violet: #644d52;
+$orange: #f77a52;
+$yellow: #ff974f;
+$blue: #32a28f;
+$gray: #a49a87;
+
+$bg-color: #f1f1f1;
+
+$mobile-only: (max-width: 767px);
+$tablet-max: (max-width: 1199px);
+$tablet-widths: (min-width: 768px);
+$desktop-widths: (min-width: 1200px);
 
 $retina: (min-resolution: 144dpi), (min-resolution: 1.5dppx);

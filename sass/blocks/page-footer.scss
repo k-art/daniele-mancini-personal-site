@@ -1,0 +1,9 @@
+.page-footer {
+  padding-top: 60px;
+  padding-bottom: 20px;
+  background-color: $violet-dark;
+
+  &__wrapper {
+    @include wrapper();
+  }
+}

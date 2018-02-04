@@ -1,0 +1,19 @@
+.btn {
+  padding: 10px 20px;
+  display: inline-block;
+  color: #fff;
+  border: 1px solid #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &:hover, &:focus {
+    //background-color: $orange;
+    border: 1px solid $orange;
+    color: $orange;
+  }
+
+  &:active {
+    color: darken($orange, 15%);
+    border: 1px solid darken($orange, 15%);
+  }
+}

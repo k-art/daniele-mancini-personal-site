@@ -1,0 +1,42 @@
+.events {
+  padding-bottom: 140px;
+  background-color: $yellow;
+
+  &__wrapper {
+    @include wrapper;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__title {
+    margin: 0 auto;
+    padding-top: 60px;
+    padding-bottom: 50px;
+    font-size: 40px;
+    line-height: 50px;
+    text-align: center;
+  }
+
+  &__schedule {
+    width: 40%;
+    height: 300px;
+    border: 1px solid $violet;
+    box-sizing: border-box;
+  }
+
+  &__schedule-name {
+    margin: 0;
+    padding: 20px 30px;
+    background-color: $violet;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+
+  &__list {
+    @include no-list;
+    height: 240px;
+    overflow: auto;
+    background-color: lighten($gray, 10%);
+  }
+}

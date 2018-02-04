@@ -1,0 +1,12 @@
+.copyright {
+  margin-top: 20px;
+
+  &__link {
+    text-decoration: none;
+    color: $orange;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

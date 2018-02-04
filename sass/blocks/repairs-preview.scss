@@ -1,0 +1,33 @@
+.repairs-preview {
+  //min-height: 500px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  text-align: center;
+  background-color: $gray;
+  background-image: url("/img/bg-tools-2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+
+  &__wrapper {
+    padding: 50px 75px;
+    @include custom-wrapper(600px);
+    background-color:  fade-out($violet, 0.1);
+  }
+
+  &__title {
+    margin: 0 auto;
+    padding-bottom: 40px;
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  &__text {
+    margin: 0 auto;
+    margin-bottom: 50px;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+  }
+}

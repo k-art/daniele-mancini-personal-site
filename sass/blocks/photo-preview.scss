@@ -1,0 +1,54 @@
+.photo-preview {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: $blue;
+
+  &__title {
+    margin: 0 auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  &__description {
+    padding: 30px;
+    width: 25%;
+    height: 350px;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  &__btn {
+  }
+
+  &__link {
+    //position: relative;
+    //margin: 0;
+    width: 25%;
+    height: 350px;
+    overflow: hidden;
+    background-color: black;
+
+    &:hover img {
+      transition: all .3s ease-out;
+      transform: scale(1);
+      filter: none;
+    }
+  }
+
+  img {
+    display: block;
+    object-fit: cover;
+    object-position: top;
+    width: 100%;
+    height: 100%;
+    transform: scale(1.06);
+    transition: all .3s ease-out;
+    filter: grayscale(100%);
+    //position: absolute;
+    //left: 0;
+    //top: 0;
+  }
+}

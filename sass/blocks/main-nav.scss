@@ -1,0 +1,223 @@
+.main-nav {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+
+  @media #{$tablet-max} {
+    position: relative;
+    background-color: transparent;
+  }
+
+  &--closed {
+
+    @media #{$tablet-max} {
+      .main-nav__toggle {
+
+        & span {
+          top: 29px;
+          background-color: #fff;
+          transition: all .3s;
+
+          &::before,
+          &::after {
+            background-color: #fff;
+            transition: all .3s;
+            transform: rotate(0);
+          }
+
+          &::before {
+            top: -17px;
+            left: 0;
+          }
+          &::after {
+            top: 17px;
+            right: 0;
+          }
+        }
+      }
+
+      //.main-nav__list {
+      //  display: none;
+      //}
+    }
+  }
+
+  &--no-js {
+    @media #{$tablet-max} {
+
+      .main-nav__toggle {
+        display: none;
+      }
+
+      //.main-nav__list {
+      //  display: flex;
+      //}
+    }
+  }
+
+  &__toggle {
+    display: none;
+
+    @media #{$tablet-max} {
+      display: block;
+      z-index: 150;
+      position: absolute;
+      right: 15px;
+      top: 9px;
+      padding: 30px;
+      width: 40px;
+      height: 40px;
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-position: center;
+      border: 1px solid #fff;
+      outline: none;
+      cursor: pointer;
+
+      &:hover {
+        border: 1px solid $orange;
+      }
+
+      & span {
+        position: absolute;
+        left: 10px;
+        top: 14px;
+        width: 40px;
+        height: 3px;
+        background-color: $orange;
+        transition: all .3s;
+
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+
+          width: 40px;
+          height: 3px;
+
+          background-color: $orange;
+          transition: all .3s;
+        }
+
+        &::before {
+          top: 16px;
+          left: -10px;
+          transform: rotate(58deg);
+        }
+
+        &::after {
+          top: 16px;
+          right: -10px;
+          transform: rotate(-58deg);
+        }
+      }
+    }
+  }
+
+  &__list {
+    @include no-list;
+    text-align: center;
+
+    @media #{$tablet-max} {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      background-color: $violet-dark;
+    }
+
+    @media #{$desktop-widths} {
+      padding: 3px 0;
+    }
+  }
+
+  &__item {
+    @media #{$mobile-only} {
+      flex-basis: 100%;
+
+    }
+
+    @media #{$tablet-widths} and #{$tablet-max} {
+      flex-basis: 50%;
+
+      &:first-of-type {
+        flex-basis: 100%;
+      }
+
+      &:nth-of-type(even) {
+        border-right: 1px solid #fff;
+      }
+
+      &:last-of-type:nth-of-type(even) {
+        flex-basis: 100%;
+        border-right: none;
+      }
+    }
+
+    @media #{$tablet-max} {
+      box-sizing: border-box;
+      border-bottom: 1px solid #fff;
+    }
+
+    @media #{$desktop-widths} {
+      display: inline-block;
+    }
+
+    a {
+      display: block;
+      padding: 20px;
+      color: #fff;
+      text-decoration: none;
+      text-transform: uppercase;
+
+      @media #{$tablet-max} {
+        //padding: 25px;
+        font-size: 18px;
+      }
+
+      &:hover, &:focus {
+        @media #{$tablet-max} {
+          color: $orange;
+        }
+
+        @media #{$desktop-widths} {
+          background-color: $orange;
+        }
+      }
+
+      &:active {
+        background-color: fade_out($orange, .6);
+
+        @media #{$desktop-widths} {
+          background-color: fade_out($orange, .2);
+        }
+      }
+    }
+
+    &--active {
+      a {
+        @media #{$tablet-max} {
+          padding: 30px;
+          color: $orange;
+        }
+
+        @media #{$desktop-widths} {
+          box-shadow: inset 0 0 0 1px #fff;
+        }
+
+        &:hover, &:focus {
+
+          @media #{$desktop-widths} {
+            background-color: transparent;
+          }
+        }
+
+        &:active {
+            background-color: transparent;
+        }
+      }
+    }
+  }
+}
